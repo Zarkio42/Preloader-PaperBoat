@@ -1,0 +1,101 @@
+body {
+  background-color: #f27620;
+  height: 100%;
+  margin: 0;
+}
+
+.triangulo {
+  position: relative;
+  height: 100%;
+}
+
+.triangulo {
+  transform: rotate(180deg);
+  width: 100px;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 86.6px solid #FFFFFF; /* altura = (largura / 2) * raiz quadrada de 3 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: changeShape1 3s infinite alternate;
+}
+
+.mastro {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 100px 50px;
+  border-color: transparent transparent #FFFFFF transparent;
+  border-radius: 5px;
+  transform: rotate(45deg);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 150px;
+  right: -80px;
+  margin: auto;
+  animation: changeShape 3s infinite alternate;
+}
+
+@keyframes changeShape1 {
+  0% {
+    right: 0;
+    border-radius: 0%;
+    rotate: -3deg;
+  }
+  25% {
+    left: 50px;
+    border-radius: 20%;
+    rotate: 4deg;
+  }
+  50% {
+    left: 20px;
+    border-radius: 20%;
+    transform: translateX(50);
+    rotate: -3deg;
+  }
+  75% {
+    left: 120px;
+    border-radius: 20%;
+    rotate: 4deg;
+  }
+  100% {
+    left: 0px;
+    border-radius: 20%;
+    rotate: -3deg;
+  }
+}
+
+@keyframes changeShape {
+  0% {
+    left: 0px;
+    border-radius: 10%;
+    rotate: 43deg;
+  }
+  25% {
+    left: 50px;
+    border-radius: 5%;
+    rotate: 48deg;
+  }
+  50% {
+    left: 20px;
+    border-radius: 50%;
+    rotate: 43deg;
+  }
+  75% {
+    left: 120px;
+    border-radius: 0%;
+    rotate: 48deg;
+  }
+  100% {
+    left: 0px;
+    border-radius: 5%;
+    rotate: 43deg;
+  }
+}
